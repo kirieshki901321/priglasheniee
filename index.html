@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Приглашение на свадьбу Анастасии и Максима 29 августа 2026 года">
+    <title>Приглашение на свадьбу | Анастасия и Максим</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Marck+Script&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #f8fcf8;
+            color: #000000;
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Белые цветы на фоне */
+        .bg-flower {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.05;
+            pointer-events: none;
+            will-change: transform;
+        }
+        
+        .bg-flower-1 {
+            top: 10%;
+            left: 5%;
+            font-size: 120px;
+            color: #ffffff;
+            transform: rotate(-15deg);
+        }
+        
+        .bg-flower-2 {
+            top: 25%;
+            right: 8%;
+            font-size: 80px;
+            color: #ffffff;
+            transform: rotate(25deg);
+        }
+        
+        .bg-flower-3 {
+            bottom: 15%;
+            left: 10%;
+            font-size: 100px;
+            color: #ffffff;
+            transform: rotate(-30deg);
+        }
+        
+        .bg-flower-4 {
+            bottom: 30%;
+            right: 5%;
+            font-size: 90px;
+            color: #ffffff;
+            transform: rotate(40deg);
+        }
+        
+        .bg-flower-5 {
+            top: 40%;
+            left: 15%;
+            font-size: 70px;
+            color: #ffffff;
+            transform: rotate(10deg);
+        }
+        
+        .bg-flower-6 {
+            top: 60%;
+            right: 15%;
+            font-size: 85px;
+            color: #ffffff;
+            transform: rotate(-20deg);
+        }
+        
+        /* Затемнение для лучшей читаемости текста */
+        .text-overlay {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Герой секция */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(248, 252, 248, 0.85), rgba(248, 252, 248, 0.9));
+            z-index: 1;
+        }
+        
+        .hero-content {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 100%;
+            border: 1px solid rgba(69, 161, 115, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(5px);
+        }
+        
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #3d8e6e;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .and {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #55b193;
+            margin: 0 10px;
+        }
+        
+        .date {
+            font-family: 'Marck Script', cursive;
+            font-size: 2rem;
+            color: #000000;
+            margin: 20px 0;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #000000;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #3d8e6e;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            z-index: 2;
+            text-decoration: none;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+        
+        /* Секции с анимацией появления */
+        section {
+            padding: 60px 0;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        
+        /* Анимация появления элементов */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Задержки для последовательного появления */
+        .invitation-section { animation-delay: 0.2s; }
+        .couple-section { animation-delay: 0.3s; }
+        .details-section { animation-delay: 0.4s; }
+        .dress-code-section { animation-delay: 0.6s; }
+        .countdown-section { animation-delay: 0.8s; }
+        .rsvp-section { animation-delay: 1s; }
+        
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #3d8e6e;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: #55b193;
+        }
+        
+        .elegant-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #000000;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            padding: 0 15px;
+        }
+        
+        /* Секция с фото пары */
+        .couple-photo-container {
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        
+        .couple-photo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border: 8px solid white;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .couple-photo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Календарь - упрощенный */
+        .calendar-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            margin: 0 auto 30px;
+            border: 1px solid rgba(69, 161, 115, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        .calendar-header {
+            background: #3d8e6e;
+            color: white;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: 'Marck Script', cursive;
+        }
+        
+        .calendar-body {
+            padding: 20px;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .calendar-day {
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #000000;
+        }
+        
+        .calendar-day.empty {
+            visibility: hidden;
+        }
+        
+        .calendar-day.weekday {
+            font-weight: bold;
+            color: #3d8e6e;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        
+        .calendar-day.wedding-day {
+            background: #3d8e6e;
+            color: white;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .calendar-day.wedding-day::after {
+            content: '❤';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 0.8rem;
+        }
+        
+        .wedding-date {
+            text-align: center;
+            font-family: 'Marck Script', cursive;
+            font-size: 1.5rem;
+            color: #3d8e6e;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #55b193;
+        }
+        
+        /* Карточки */
+        .details-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .detail-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(69, 161, 115, 0.2);
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .detail-icon {
+            font-size: 2.5rem;
+            color: #3d8e6e;
+            margin-bottom: 20px;
+        }
+        
+        .detail-title {
+            font-family: 'Marck Script', cursive;
+            font-size: 1.8rem;
+            color: #3d8e6e;
+            margin-bottom: 15px;
+        }
+        
+        .detail-card p {
+            font-size: 1.2rem;
+            margin: 8px 0;
+            color: #000000;
+        }
+        
+        .detail-card p[style*="color: #3d8e6e"] {
+            color: #3d8e6e !important;
+        }
+        
+        /* Дресс-код */
+        .dress-code-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .dress-code-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(69, 161, 115, 0.2);
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .color-palette {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .color-item {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .color-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 0.9rem;
+            color: #000000;
+        }
+        
+        /* Цвета для дресс-кода */
+        .color-pink { background: #ffd1dc; }
+        .color-beige { background: #deb887; }
+        .color-mint { background: #d6f0e0; }
+        .color-white { background: white; border: 1px solid #ddd; }
+        .color-black { background: black; }
+        
+        /* Таймер - упрощенный */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 80px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(69, 161, 115, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        .countdown-number {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #3d8e6e;
+            font-weight: bold;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        
+        /* Форма */
+        .rsvp-form {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(69, 161, 115, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .radio-label {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.7);
+            color: #000000;
+        }
+        
+        .radio-label input {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        
+        .radio-label:hover {
+            border-color: #3d8e6e;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .submit-btn {
+            background: #3d8e6e;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #55b193;
+            transform: translateY(-2px);
+        }
+        
+        /* Футер */
+        footer {
+            background: #2e4a38;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .heart {
+            color: #55b193;
+            margin: 0 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Кнопка "Наверх" */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #3d8e6e;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        #backToTop:hover {
+            background: #55b193;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Адаптивность */
+        @media (min-width: 768px) {
+            .names {
+                font-size: 4.5rem;
+            }
+            
+            .and {
+                font-size: 3rem;
+            }
+            
+            .date {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 3.5rem;
+            }
+            
+            .elegant-text {
+                font-size: 1.6rem;
+            }
+            
+            .couple-photo {
+                max-width: 450px;
+            }
+            
+            .details-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .detail-card {
+                flex: 1;
+                min-width: 300px;
+            }
+            
+            .dress-code-container {
+                flex-direction: row;
+            }
+            
+            .countdown-container {
+                gap: 20px;
+            }
+            
+            .countdown-item {
+                min-width: 100px;
+                padding: 25px;
+            }
+            
+            .bg-flower-1 { font-size: 80px; }
+            .bg-flower-2 { font-size: 60px; }
+            .bg-flower-3 { font-size: 70px; }
+            .bg-flower-4 { font-size: 65px; }
+            .bg-flower-5 { font-size: 50px; }
+            .bg-flower-6 { font-size: 55px; }
+        }
+        
+        @media (max-width: 767px) {
+            .bg-flower-1 { font-size: 60px; left: 2%; }
+            .bg-flower-2 { font-size: 45px; right: 3%; }
+            .bg-flower-3 { font-size: 50px; left: 3%; }
+            .bg-flower-4 { font-size: 48px; right: 2%; }
+            .bg-flower-5 { font-size: 40px; left: 5%; }
+            .bg-flower-6 { font-size: 42px; right: 5%; }
+            
+            .couple-photo {
+                max-width: 90%;
+                border-width: 5px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .names {
+                font-size: 2.8rem;
+            }
+            
+            .and {
+                font-size: 2rem;
+            }
+            
+            .date {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .couple-photo {
+                max-width: 95%;
+            }
+            
+            .detail-card {
+                padding: 20px;
+            }
+            
+            .rsvp-form {
+                padding: 20px;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 15px;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .calendar-container {
+                padding: 15px;
+            }
+            
+            .calendar-day {
+                padding: 8px 0;
+                font-size: 0.9rem;
+            }
+            
+            .calendar-day.weekday {
+                font-size: 0.8rem;
+            }
+            
+            #backToTop {
+                width: 45px;
+                height: 45px;
+                bottom: 15px;
+                right: 15px;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Белые цветы на фоне -->
+    <div class="bg-flower bg-flower-1" aria-hidden="true">
+        <i class="fas fa-leaf"></i>
+    </div>
+    <div class="bg-flower bg-flower-2" aria-hidden="true">
+        <i class="fas fa-feather-alt"></i>
+    </div>
+    <div class="bg-flower bg-flower-3" aria-hidden="true">
+        <i class="fas fa-spa"></i>
+    </div>
+    <div class="bg-flower bg-flower-4" aria-hidden="true">
+        <i class="fas fa-seedling"></i>
+    </div>
+    <div class="bg-flower bg-flower-5" aria-hidden="true">
+        <i class="fas fa-leaf"></i>
+    </div>
+    <div class="bg-flower bg-flower-6" aria-hidden="true">
+        <i class="fas fa-feather"></i>
+    </div>
+    
+    <!-- Герой-секция -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="names">Анастасия <span class="and">&</span> Максим</h1>
+            <p class="date">29 августа 2026</p>
+            <p class="hero-subtitle">Приглашаем вас разделить с нами радость этого особенного дня</p>
+        </div>
+        <a href="#invitation" class="scroll-down" aria-label="Прокрутить вниз">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+    
+    <!-- Приглашение -->
+    <section id="invitation" class="invitation-section">
+        <div class="container text-overlay">
+            <h2 class="section-title">Дорогие друзья и родные</h2>
+            <div class="elegant-text">
+                У каждого из нас была мечта. Хотелось встретить в жизни человека, свою вторую половинку. Она сбылась - мы вместе! Мы есть друг у друга. Любовь, нежность, уважение - это то, что нас соединило. И это то, чем мы хотим поделиться с вами. Приглашаем вас на самое важное торжество в нашей жизни - нашу свадьбу!
+            </div>
+        </div>
+    </section>
+    
+    <!-- Фото пары -->
+    <section class="couple-section">
+        <div class="container text-overlay">
+            <div class="couple-photo-container">
+                <!-- ВАША ФОТОГРАФИЯ -->
+                <img src="настя и максим.jpg" alt="Анастасия и Максим" class="couple-photo" loading="lazy">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Детали мероприятия -->
+    <section class="details-section">
+        <div class="container text-overlay">
+            <h2 class="section-title">Детали мероприятия</h2>
+            <div class="details-container">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="detail-title">Дата и время</h3>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            Август 2026
+                        </div>
+                        <div class="calendar-body">
+                            <div class="calendar-grid" id="calendarGrid">
+                                <!-- Календарь будет здесь -->
+                            </div>
+                            <div class="wedding-date">
+                                Суббота<br>
+                                29 августа<br>
+                                9:20
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3 class="detail-title">Церемония</h3>
+                    <p>г. Волгоград</p>
+                    <p>пр-кт им. Маршала Советского Союза Г.К. Жукова</p>
+                    <p>д. 121</p>
+                    <p style="margin-top: 15px; font-style: italic; color: #3d8e6e;">ЗАГС Дзержинского района</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="detail-title">Банкет</h3>
+                    <p>г. Фролово</p>
+                    <p>ул. Пролетарская</p>
+                    <p>д. 25</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Дресс-код -->
+    <section class="dress-code-section">
+        <div class="container text-overlay">
+            <h2 class="section-title">Дресс-код</h2>
+            <p class="elegant-text">
+                Для создания гармоничной атмосферы и красивых фотографий, мы подготовили рекомендации по дресс-коду
+            </p>
+            
+            <div class="dress-code-container">
+                <div class="dress-code-card">
+                    <h3 class="detail-title">Для женщин</h3>
+                    <p>Платья или костюмы в пастельных тонах</p>
+                    <div class="color-palette">
+                        <div class="color-item color-pink">
+                            <span class="color-label">Светло-розовый</span>
+                        </div>
+                        <div class="color-item color-beige">
+                            <span class="color-label">Бежевый</span>
+                        </div>
+                        <div class="color-item color-mint">
+                            <span class="color-label">Мятный</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dress-code-card">
+                    <h3 class="detail-title">Для мужчин</h3>
+                    <p>Классический костюм</p>
+                    <div class="color-palette">
+                        <div class="color-item color-white">
+                            <span class="color-label">Светлый</span>
+                        </div>
+                        <div class="color-item color-black">
+                            <span class="color-label" style="color: white;">Темный</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Таймер -->
+    <section class="countdown-section">
+        <div class="container text-overlay">
+            <h2 class="section-title">До нашей свадьбы осталось</h2>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label">Дней</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">Часов</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label">Минут</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Секунд</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Форма -->
+    <section class="rsvp-section">
+        <div class="container text-overlay">
+            <h2 class="section-title">Подтвердите присутствие</h2>
+            <p class="elegant-text">
+                Пожалуйста, подтвердите ваше участие до 1 августа 2026 года
+            </p>
+            
+            <form class="rsvp-form" id="rsvpForm">
+                <h3 class="detail-title">Мы ждем вас!</h3>
+                
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="attendance" value="yes" checked>
+                        <span>Да, с радостью приду!</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="attendance" value="no">
+                        <span>К сожалению, не смогу</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить ответ</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <h2 class="footer-names">Анастасия <span class="heart"><i class="fas fa-heart"></i></span> Максим</h2>
+            <div class="elegant-text" style="color: white;">
+                <p>С любовью и благодарностью приглашаем вас на нашу свадьбу</p>
+            </div>
+            <div style="margin-top: 40px; color: #a8b8a8;">
+                <p>© 2026 Приглашение на свадьбу Анастасии и Максима</p>
+                <p>Создано с любовью</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Кнопка "Наверх" -->
+    <button id="backToTop" title="Наверх" aria-label="Наверх">↑</button>
+    
+    <!-- JavaScript -->
+    <script>
+        // Функция для генерации календаря с днями недели
+        function generateCalendar() {
+            const calendarGrid = document.getElementById('calendarGrid');
+            if (!calendarGrid) return;
+            
+            // Дни недели (сокращенные)
+            const daysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+            
+            let calendarHTML = '';
+            
+            // Добавляем заголовки дней недели
+            daysOfWeek.forEach(day => {
+                calendarHTML += `<div class="calendar-day weekday">${day}</div>`;
+            });
+            
+            // Август 2026 начинается с субботы (6-й день в массиве, если считать с понедельника=0)
+            const firstDay = 5; // Суббота (5-й индекс, если Пн=0, Вт=1, ..., Сб=5)
+            const daysInMonth = 31;
+            const weddingDay = 29;
+            
+            // Пустые клетки перед началом месяца
+            for (let i = 0; i < firstDay; i++) {
+                calendarHTML += '<div class="calendar-day empty"></div>';
+            }
+            
+            // Дни месяца
+            for (let day = 1; day <= daysInMonth; day++) {
+                if (day === weddingDay) {
+                    calendarHTML += `<div class="calendar-day wedding-day">${day}</div>`;
+                } else {
+                    calendarHTML += `<div class="calendar-day">${day}</div>`;
+                }
+            }
+            
+            calendarGrid.innerHTML = calendarHTML;
+        }
+        
+        // Функция для обновления таймера
+        function updateCountdown() {
+            const weddingDate = new Date('August 29, 2026 09:20:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+            
+            // Если свадьба уже прошла
+            if (timeLeft < 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            
+            // Вычисляем дни, часы, минуты, секунды
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            // Обновляем значения на странице
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+            document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+        }
+        
+        // Обработка формы
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const attendance = document.querySelector('input[name="attendance"]:checked').value;
+            const message = attendance === 'yes' 
+                ? 'Спасибо! Будем рады видеть вас на нашей свадьбе! ❤️' 
+                : 'Спасибо за ответ! Будем скучать без вас. ❤️';
+            
+            alert(message);
+            
+            // Сбрасываем форму
+            this.reset();
+            this.querySelector('input[value="yes"]').checked = true;
+        });
+        
+        // Кнопка "Наверх"
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'block';
+                backToTopBtn.style.opacity = '1';
+            } else {
+                backToTopBtn.style.opacity = '0';
+                setTimeout(() => {
+                    if (window.pageYOffset <= 300) {
+                        backToTopBtn.style.display = 'none';
+                    }
+                }, 300);
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Плавная прокрутка для всех ссылок с якорями
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Инициализация при загрузке страницы
+        function init() {
+            // Генерируем календарь
+            generateCalendar();
+            
+            // Запускаем таймер сразу
+            updateCountdown();
+            
+            // Обновляем таймер каждую секунду
+            setInterval(updateCountdown, 1000);
+            
+            console.log('Сайт загружен! Календарь и таймер работают.');
+        }
+        
+        if (document.readyState !== 'loading') {
+            init();
+        } else {
+            document.addEventListener('DOMContentLoaded', init);
+        }
+        
+        // Обработка ошибок загрузки изображений
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                console.log('Ошибка загрузки изображения:', this.src);
+                // Замена на заглушку при ошибке загрузки
+                this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmN2YyIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzNkOGU2ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkFuYXN0YXNpYSAmIE1heGltPC90ZXh0Pjwvc3ZnPg==';
+                this.alt = 'Изображение временно недоступно';
+            });
+        });
+    </script>
+</body>
+</html>
